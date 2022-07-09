@@ -1,0 +1,187 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1240px;
+    margin: 0 auto;
+    .carousel {
+        flex-basis: 100%;
+        display: flex;
+        height: 415px;
+        position: relative;
+        .index-img-carousel{
+            position: absolute;
+            right: 50%;
+            bottom: 20px;
+            font-size: 2em;
+            color: white;
+        }
+        button {
+            position: absolute;
+            height: 100%;
+            width: 50px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            font-size: 3em;   
+            &:hover {
+                background-color: rgba(211, 211, 211, 0.27);
+            }
+        }
+        .next{
+            right: 20px;
+            
+        }
+        .prev{
+            left: 20px;
+        }
+        > img {
+            height: 415px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 25px;
+            margin-bottom: 100px;
+        }
+        
+    }
+    .info-accommodation-container{
+        display: flex; 
+        flex-wrap: wrap;
+        flex-basis:  100%;
+        justify-content: space-between;
+        align-items: center;
+        div:nth-child(2) {
+            flex-basis: 60%;
+            color: #FF6060;
+            font-size: 1.5em;
+            
+            h2{
+                font-size: 1.6em; 
+                font-weight: 300;
+                margin-bottom: 0;
+            }
+            p {
+                margin-top: 0; 
+                font-size: 1.2em; 
+            }
+        }
+        .host-profil {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 30%;
+            order: 2; 
+            justify-content: center;
+            margin-top: 100px;
+            .rating {
+                flex-basis: 100%;
+                display: flex;
+                order: 3;
+                justify-content: space-between;
+                margin: 30px 0;
+                svg {
+                    height: 3em; 
+                    width: 3em;
+                    
+                }
+                }
+                h3 {
+                    display: flex;
+                    color: #FF6060;
+                    font-size: 1.6em;
+                    font-weight: 100;
+                    order: 1;
+                    justify-content: center;
+                    margin-right: 20px;
+                }
+                >img {
+                    order: 2;
+                    border-radius: 50%;
+                    height: 100px;
+                    width: 100px; 
+                }
+        }
+    }
+
+   
+}
+@media screen and (max-width: 990px) {
+    .prev, .next {
+        font-size: 1.4em !important;
+    }
+    .index-img-carousel {
+       display: none;
+    }
+    main {
+       
+        .info-accommodation-container {
+            flex-basis: 100%;
+            div:nth-child(2){
+                flex-basis: 100%;
+                h2 {
+                    font-size: 1em;
+                }
+                p{
+                    font-size: 0.8em;
+                    padding-top: 10px;
+                    margin-bottom: 0;
+                    padding-bottom: 10px;
+                }
+                .tags {
+                    flex-wrap: wrap;
+                    row-gap: 10px;
+                    margin: 0;
+                    
+                }
+                .tags li {
+                    font-size: 0.4em;
+                    border-radius: 8px;
+                }
+            }
+            .host-profil {
+                flex-basis: 100%;
+                margin-top: 0;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                h3 {
+                    font-size: 1.1em;
+                    flex-basis: 20%;
+                    order: 2; 
+                    position: relative;
+                    left: 60px;
+                }
+                img  {
+                    height: 40px;
+                    width: 40px;
+                    order: 3;
+                }
+                .rating  {
+                    order: 1;
+                    flex-basis: 35%;
+                    svg {
+                        height: 25px;
+                        width: 25px;
+                    }
+
+                }
+            }
+        }
+        .collapse-container {
+            margin-top: -40px;
+            flex-wrap: wrap;
+            .collapse {
+                flex-basis: 100%;
+                .collapse-title {
+                    font-size: 1em;
+                    text-align: start;
+                }
+                &:nth-child(2){
+                    position: relative;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
